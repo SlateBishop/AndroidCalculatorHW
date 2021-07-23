@@ -24,105 +24,105 @@
             android:id="@+id/button_clear"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_clear" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_delete"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_del" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_divide"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_div" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_multiply"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_multiply" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_7"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_7" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_8"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_8" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_9"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_9" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_minus"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_minus" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_4"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_4" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_5"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_5" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_6"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_6" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_plus"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_plus" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_1"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_1" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_2"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_2" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_3"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_3" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -131,7 +131,7 @@
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_calc" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -140,14 +140,14 @@
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_dot"
             android:layout_width="@dimen/button_width"
             android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_normal"
+            android:background="@drawable/button_selector"
             android:text="@string/button_dot" />
 
 
