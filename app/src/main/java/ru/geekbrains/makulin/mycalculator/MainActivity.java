@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonDivide;
     private Button buttonDelete;
     private Button buttonClear;
+    private Calculator calculator;
 
 
     @Override
@@ -37,6 +38,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+
+        calculator = new Calculator();
+        setContent();
+
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(TAG, calculator);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        calculator = savedInstanceState.getParcelable(TAG);
+        setContent();
+    }
+
+    private void setContent() {
+        resultView.setText(String.valueOf(calculator.getResultView()));
+        userActionsView.setText(String.valueOf(calculator.getUserActionsText()));
     }
 
     private void initView() {

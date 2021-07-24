@@ -12,22 +12,29 @@ public class Calculator implements Parcelable {
 
     }
 
+    public String getResultView() {
+        return resultView;
+    }
 
+    public String getUserActionsText() {
+        return userActionsText;
+    }
 
+    public Double getResult() {
+        return result;
+    }
 
+    public void setResultView(String resultView) {
+        this.resultView = resultView;
+    }
 
+    public void setUserActionsText(String userActionsText) {
+        this.userActionsText = userActionsText;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    public void setResult(Double result) {
+        this.result = result;
+    }
 
     //Parcelable implementation
 
