@@ -10,6 +10,17 @@
         android:scaleType="centerCrop"
         android:src="@drawable/background1" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result_screen"
+        android:layout_width="@dimen/result_screen_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/result_screen_margin_bottom"
+        android:background="@color/white"
+        android:textSize="@dimen/result_text_size"
+        app:layout_constraintBottom_toTopOf="@id/grid_layout"
+        app:layout_constraintEnd_toEndOf="@id/grid_layout"
+        app:layout_constraintStart_toStartOf="@id/grid_layout" />
+
     <GridLayout
         android:id="@+id/grid_layout"
         android:layout_width="wrap_content"
