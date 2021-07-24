@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-
+        initListeners();
         calculator = new Calculator();
         setContent();
 
@@ -87,9 +88,93 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonClear = findViewById(R.id.button_clear);
     }
 
+    private void onToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void initListeners() {
+        resultView.setOnClickListener(this);
+        userActionsView.setOnClickListener(this);
+        buttonOne.setOnClickListener(this);
+        buttonTwo.setOnClickListener(this);
+        buttonThree.setOnClickListener(this);
+        buttonFour.setOnClickListener(this);
+        buttonFive.setOnClickListener(this);
+        buttonSix.setOnClickListener(this);
+        buttonSeven.setOnClickListener(this);
+        buttonEight.setOnClickListener(this);
+        buttonNine.setOnClickListener(this);
+        buttonZero.setOnClickListener(this);
+        buttonDot.setOnClickListener(this);
+        buttonCalculate.setOnClickListener(this);
+        buttonPlus.setOnClickListener(this);
+        buttonMinus.setOnClickListener(this);
+        buttonMultiply.setOnClickListener(this);
+        buttonDivide.setOnClickListener(this);
+        buttonDelete.setOnClickListener(this);
+        buttonClear.setOnClickListener(this);
+    }
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_0:
+                onToast("Zero");
+                break;
+            case R.id.button_1:
+                onToast("One");
+                break;
+            case R.id.button_2:
+                onToast("Two");
+                break;
+            case R.id.button_3:
+                onToast("Three");
+                break;
+            case R.id.button_4:
+                onToast("Four");
+                break;
+            case R.id.button_5:
+                onToast("Five");
+                break;
+            case R.id.button_6:
+                onToast("Six");
+                break;
+            case R.id.button_7:
+                onToast("Seven");
+                break;
+            case R.id.button_8:
+                onToast("Eight");
+                break;
+            case R.id.button_9:
+                onToast("Nine");
+                break;
+            case R.id.button_calc:
+                onToast("Calculation");
+                break;
+            case R.id.button_clear:
+                onToast("Clear");
+                break;
+            case R.id.button_delete:
+                onToast("Delete");
+                break;
+            case R.id.button_divide:
+                onToast("Divide");
+                break;
+            case R.id.button_dot:
+                onToast("Dot");
+                break;
+            case R.id.button_minus:
+                onToast("Minus");
+                break;
+            case R.id.button_multiply:
+                onToast("Multiply");
+                break;
+            case R.id.button_plus:
+                onToast("Plus");
+                break;
+            default:
+                break;
+        }
 
     }
 }
