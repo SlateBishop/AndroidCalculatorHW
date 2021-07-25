@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -21,7 +22,9 @@
         android:textSize="@dimen/result_text_size"
         app:layout_constraintBottom_toTopOf="@id/grid_layout"
         app:layout_constraintEnd_toEndOf="@id/grid_layout"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/grid_layout"
+        app:layout_constraintTop_toBottomOf="@id/actions_screen"
         tools:text="aaabbb" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -33,7 +36,11 @@
         android:textSize="@dimen/actions_text_size"
         app:layout_constraintBottom_toTopOf="@id/result_screen"
         app:layout_constraintEnd_toEndOf="@id/result_screen"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/result_screen"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="aaabbb" />
 
     <GridLayout
@@ -43,8 +50,9 @@
         android:columnCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/result_screen">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_clear"
