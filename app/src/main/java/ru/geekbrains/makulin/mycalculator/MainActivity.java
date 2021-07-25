@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initListeners();
         calculator = new Calculator();
         setContent();
+        getSupportActionBar().hide();
+
 
 
     }
