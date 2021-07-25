@@ -15,14 +15,8 @@
 
         />
 
-    <padding
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="0dp"
-        android:top="0dp" />
-
     <size
-        android:width="50dp"
-        android:height="50dp" />
+        android:width="@dimen/button_width"
+        android:height="@dimen/button_height" />
 
 </shape>

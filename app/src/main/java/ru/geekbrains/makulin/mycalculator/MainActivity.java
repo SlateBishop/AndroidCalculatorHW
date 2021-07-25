@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static String TAG = "textViews";
+    private static final String TAG = "textViews";
     private TextView resultView;
     private TextView userActionsView;
     private Button buttonOne;
@@ -120,57 +120,93 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.button_0:
                 onToast("Zero");
+
+                setContent();
                 break;
             case R.id.button_1:
                 onToast("One");
+
+                setContent();
                 break;
             case R.id.button_2:
                 onToast("Two");
+
+                setContent();
                 break;
             case R.id.button_3:
                 onToast("Three");
+
+                setContent();
                 break;
             case R.id.button_4:
                 onToast("Four");
+
+                setContent();
                 break;
             case R.id.button_5:
                 onToast("Five");
+
+                setContent();
                 break;
             case R.id.button_6:
                 onToast("Six");
+
+                setContent();
                 break;
             case R.id.button_7:
                 onToast("Seven");
+
+                setContent();
                 break;
             case R.id.button_8:
                 onToast("Eight");
+
+                setContent();
                 break;
             case R.id.button_9:
                 onToast("Nine");
+
+                setContent();
                 break;
             case R.id.button_calc:
                 onToast("Calculation");
+
+                setContent();
                 break;
             case R.id.button_clear:
                 onToast("Clear");
+
+                setContent();
                 break;
             case R.id.button_delete:
                 onToast("Delete");
+
+                setContent();
                 break;
             case R.id.button_divide:
                 onToast("Divide");
+
+                setContent();
                 break;
             case R.id.button_dot:
                 onToast("Dot");
+
+                setContent();
                 break;
             case R.id.button_minus:
                 onToast("Minus");
+
+                setContent();
                 break;
             case R.id.button_multiply:
                 onToast("Multiply");
+
+                setContent();
                 break;
             case R.id.button_plus:
                 onToast("Plus");
+
+                setContent();
                 break;
             default:
                 break;
