@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().hide();
 
 
-
     }
 
     @Override
@@ -63,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setContent() {
-        resultView.setText(String.valueOf(calculator.getResultView()));
-        userActionsView.setText(String.valueOf(calculator.getUserActionsText()));
+        resultView.setText(calculator.getResultView());
+        userActionsView.setText(calculator.getUserActionsText());
     }
 
     private void initView() {

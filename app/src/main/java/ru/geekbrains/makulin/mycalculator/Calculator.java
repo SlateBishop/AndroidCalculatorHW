@@ -6,11 +6,16 @@ import android.os.Parcelable;
 public class Calculator implements Parcelable {
     private String resultView = "0";
     private String userActionsText = "";
-    private Double result;
+    private Double result = 0.0;
 
     public Calculator() {
 
     }
+
+//    public void plusAction(double input) {
+//        result += input;
+    }
+
 
     public String getResultView() {
         return resultView;
@@ -32,9 +37,6 @@ public class Calculator implements Parcelable {
         this.userActionsText = userActionsText;
     }
 
-    public void setResult(Double result) {
-        this.result = result;
-    }
 
     //Parcelable implementation
 
