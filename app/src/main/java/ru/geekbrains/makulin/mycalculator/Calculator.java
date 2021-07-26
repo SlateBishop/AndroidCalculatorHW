@@ -14,7 +14,7 @@ public class Calculator implements Parcelable {
 
 //    public void plusAction(double input) {
 //        result += input;
-    }
+//    }
 
 
     public String getResultView() {
