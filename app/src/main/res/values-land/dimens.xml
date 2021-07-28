@@ -4,6 +4,7 @@
     <dimen name="button_margin">5dp</dimen>
     <dimen name="text_screen_width">430dp</dimen>
     <dimen name="result_text_size">24sp</dimen>
+    <dimen name="button_text_size">12sp</dimen>
     <dimen name="result_screen_margin_bottom">10dp</dimen>
     <dimen name="actions_text_size">14sp</dimen>
     <dimen name="button_height">30dp</dimen>
