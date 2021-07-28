@@ -17,4 +17,8 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="MyBackground">
+        <item name="android:background">@drawable/background1</item>
+    </style>
+
 </resources>
