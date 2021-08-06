@@ -53,6 +53,7 @@ public class ThemeSelectorActivity extends AppCompatActivity implements View.OnC
 //
 //                break;
         }
+        recreate();
 
     }
 
