@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonDivide = findViewById(R.id.button_divide);
         buttonDelete = findViewById(R.id.button_delete);
         buttonClear = findViewById(R.id.button_clear);
-        buttonClear = findViewById(R.id.button_theme_chooser);
+        buttonChooseTheme = findViewById(R.id.button_theme_chooser);
     }
 
     private void onToast(String message) {
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_theme_chooser:
 
                 intent = new Intent(this, ThemeSelectorActivity.class);
-
+                startActivity(intent);
 
                 break;
 
