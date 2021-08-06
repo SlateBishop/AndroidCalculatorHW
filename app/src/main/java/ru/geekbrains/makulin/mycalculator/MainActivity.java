@@ -42,16 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initListeners();
         calculator = new Calculator();
         setContent();
-//        getSupportActionBar().hide();
-
-
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(TAG, calculator);
-
     }
 
     @Override
@@ -64,6 +60,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setContent() {
         resultView.setText(calculator.getResultView());
         userActionsView.setText(calculator.getUserActionsText());
+    }
+
+    private void setAction(String input) {
+        calculator.setUserActionsText(input);
+    }
+
+    private void setResult(String input) {
+        calculator.setResultView(input);
     }
 
     private void initView() {
@@ -120,98 +124,87 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_0:
-                onToast("Zero");
+                setAction("0");
 
-                setContent();
                 break;
             case R.id.button_1:
-                onToast("One");
+                setAction("1");
 
-                setContent();
                 break;
             case R.id.button_2:
-                onToast("Two");
+                setAction("2");
 
-                setContent();
                 break;
             case R.id.button_3:
-                onToast("Three");
+                setAction("3");
 
-                setContent();
                 break;
             case R.id.button_4:
-                onToast("Four");
+                setAction("4");
 
-                setContent();
                 break;
             case R.id.button_5:
-                onToast("Five");
+                setAction("5");
 
-                setContent();
                 break;
             case R.id.button_6:
-                onToast("Six");
+                setAction("6");
 
-                setContent();
                 break;
             case R.id.button_7:
-                onToast("Seven");
+                setAction("7");
 
-                setContent();
                 break;
             case R.id.button_8:
-                onToast("Eight");
+                setAction("8");
 
-                setContent();
                 break;
             case R.id.button_9:
-                onToast("Nine");
+                setAction("9");
 
-                setContent();
                 break;
             case R.id.button_calc:
-                onToast("Calculation");
+                setResult(calculator.getResultView());
 
-                setContent();
                 break;
             case R.id.button_clear:
-                onToast("Clear");
+                setAction("сброс");
 
-                setContent();
                 break;
             case R.id.button_delete:
-                onToast("Delete");
+                setAction("delete");
 
-                setContent();
                 break;
             case R.id.button_divide:
-                onToast("Divide");
+                setAction("/");
+                setResult(calculator.getResultView());
 
-                setContent();
                 break;
             case R.id.button_dot:
-                onToast("Dot");
+                setAction(".");
 
-                setContent();
                 break;
             case R.id.button_minus:
-                onToast("Minus");
+                setAction("-");
+                setResult(calculator.getResultView());
 
-                setContent();
                 break;
             case R.id.button_multiply:
-                onToast("Multiply");
+                setAction("*");
+                setResult(calculator.getResultView());
 
-                setContent();
                 break;
             case R.id.button_plus:
-                onToast("Plus");
+                setAction("+");
+                setResult(calculator.getResultView());
 
-                setContent();
                 break;
             default:
                 break;
         }
+        setContent();
 
     }
+
+
 }

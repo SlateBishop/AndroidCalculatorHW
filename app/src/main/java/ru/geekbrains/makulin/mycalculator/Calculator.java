@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Calculator implements Parcelable {
-    private String resultView = "0";
+    private String resultView = "заглушка";
     private String userActionsText = "";
     private Double result = 0.0;
 
