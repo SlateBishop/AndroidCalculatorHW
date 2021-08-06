@@ -1,5 +1,6 @@
 package ru.geekbrains.makulin.mycalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonDivide;
     private Button buttonDelete;
     private Button buttonClear;
+    private Button buttonChooseTheme;
     private Calculator calculator;
+    private Intent intent;
 
 
     @Override
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonDivide = findViewById(R.id.button_divide);
         buttonDelete = findViewById(R.id.button_delete);
         buttonClear = findViewById(R.id.button_clear);
+        buttonClear = findViewById(R.id.button_theme_chooser);
     }
 
     private void onToast(String message) {
@@ -118,6 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonDivide.setOnClickListener(this);
         buttonDelete.setOnClickListener(this);
         buttonClear.setOnClickListener(this);
+        buttonChooseTheme.setOnClickListener(this);
     }
 
     @Override
@@ -199,6 +204,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 setResult(calculator.getResultView());
 
                 break;
+            case R.id.button_theme_chooser:
+
+                intent = new Intent(this, ThemeSelectorActivity.class);
+
+
+                break;
+
             default:
                 break;
         }

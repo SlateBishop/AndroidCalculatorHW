@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_app_theme"
+        android:textSize="@dimen/choose_theme_text_size" />
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/choose_main_theme_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_theme_choose"
+            android:textSize="@dimen/choose_theme_text_size" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/choose_improved_theme_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/improved_theme_choose"
+            android:textSize="@dimen/choose_theme_text_size" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/apply_theme_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply_theme_text"/>
 
 </LinearLayout>
