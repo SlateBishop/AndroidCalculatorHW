@@ -164,7 +164,14 @@
             style="@style/MyButtonStyle"
             android:background="@drawable/button_selector"
             android:text="@string/button_dot" />
-
-
     </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/MyButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_theme_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

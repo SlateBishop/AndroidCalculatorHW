@@ -18,4 +18,5 @@
     <string name="button_0">0</string>
     <string name="button_dot">.</string>
     <string name="button_calc">=</string>
+    <string name="choose_theme_button">Choose theme</string>
 </resources>
