@@ -1,5 +1,6 @@
 package ru.geekbrains.makulin.mycalculator;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -8,16 +9,13 @@ import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ThemeSelectorActivity extends AppCompatActivity implements View.OnClickListener {
+public class ThemeSelectorActivity extends AppCompatActivity implements View.OnClickListener, Constants {
 
-    private static final int THEME_MAIN = 0;
-    private static final int THEME_IMPROVED = 1;
-    private static final String KEY_SP = "SP Key";
-    private static final String KEY_CURRENT_THEME = "Current theme";
+
     private RadioButton buttonThemeMain;
     private RadioButton buttonThemeImproved;
     private Button buttonApply;
-
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +24,8 @@ public class ThemeSelectorActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_theme_selector);
         initButtons();
         initListeners();
+        intent = getIntent();
+
     }
 
     private int getCurrentTheme() {
@@ -49,9 +49,12 @@ public class ThemeSelectorActivity extends AppCompatActivity implements View.OnC
             case R.id.choose_improved_theme_button:
                 setCurrentTheme(THEME_IMPROVED);
                 break;
-//            case R.id.apply_theme_button:
-//
-//                break;
+            case R.id.apply_theme_button:
+                int currentTheme = getCurrentTheme();
+                intent.putExtra(KEY_INTENT,currentTheme);
+                setResult(RESULT_CODE,intent);
+                finish();
+                break;
         }
         recreate();
 

@@ -1,17 +1,21 @@
 package ru.geekbrains.makulin.mycalculator;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, Constants {
 
-    private static final String TAG = "textViews";
     private TextView resultView;
     private TextView userActionsView;
     private Button buttonOne;
@@ -34,18 +38,56 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonClear;
     private Button buttonChooseTheme;
     private Calculator calculator;
-    private Intent intent;
+    private ActivityResultLauncher activityResultLauncher;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getCurrentThemeSP());
         setContentView(R.layout.activity_main);
         initView();
         initListeners();
         calculator = new Calculator();
         setContent();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initResultLauncher();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        recreate();
+    }
+
+    private void initResultLauncher() {
+        activityResultLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+
+                    }
+                });
+    }
+
+    private int getCurrentThemeSP() {
+        SharedPreferences sp = getSharedPreferences(KEY_SP, MODE_PRIVATE);
+        switch (sp.getInt(KEY_CURRENT_THEME, 0)) {
+            case THEME_MAIN:
+                return R.style.Theme_MyAppStyle;
+            case THEME_IMPROVED:
+                return R.style.Theme_MyAppStyle_Improved;
+        }
+        return R.style.Theme_MyAppStyle;
+    }
+
+//    private int getCurrentThemeFromActivityResult() {
+//    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -205,10 +247,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.button_theme_chooser:
-
-                intent = new Intent(this, ThemeSelectorActivity.class);
-                startActivity(intent);
-
+                Intent intent = new Intent(this, ThemeSelectorActivity.class);
+                activityResultLauncher.launch(intent);
                 break;
 
             default:
