@@ -39,12 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonChooseTheme;
     private Calculator calculator;
     private ActivityResultLauncher activityResultLauncher;
+    private int myThemeID;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(getCurrentThemeSP());
+        setTheme(getCurrentThemeFromSP());
+//        setTheme(getCurrentThemeFromActivityResult());
         setContentView(R.layout.activity_main);
         initView();
         initListeners();
@@ -70,12 +72,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
-
+                        myThemeID = result.getData().getExtras().getInt(KEY_INTENT);
                     }
                 });
     }
 
-    private int getCurrentThemeSP() {
+    private int getCurrentThemeFromSP() {
         SharedPreferences sp = getSharedPreferences(KEY_SP, MODE_PRIVATE);
         switch (sp.getInt(KEY_CURRENT_THEME, 0)) {
             case THEME_MAIN:
@@ -86,8 +88,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return R.style.Theme_MyAppStyle;
     }
 
-//    private int getCurrentThemeFromActivityResult() {
-//    }
+    private int getCurrentThemeFromActivityResult() {
+        switch (myThemeID) {
+            case THEME_MAIN:
+                return R.style.Theme_MyAppStyle;
+            case THEME_IMPROVED:
+                return R.style.Theme_MyAppStyle_Improved;
+        }
+        return R.style.Theme_MyAppStyle;
+    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
